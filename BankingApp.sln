@@ -5,15 +5,15 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankingApp", "BankingApp\BankingApp.csproj", "{96183902-086D-4A31-936B-F4AC8123D650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{3C96B50D-E15C-4C37-BE8E-65F764FB8AF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{3C96B50D-E15C-4C37-BE8E-65F764FB8AF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistance", "Persistance\Persistance.csproj", "{DFBE8FF3-2BCF-4406-882F-EBE8981302D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistance\Persistence.csproj", "{DFBE8FF3-2BCF-4406-882F-EBE8981302D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B2BAACF9-FEE9-489C-98D5-BBEF27DFFF40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{B2BAACF9-FEE9-489C-98D5-BBEF27DFFF40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestApi.UnitTests", "RestApi.UnitTests\RestApi.UnitTests.csproj", "{6B52AB40-8D27-40AF-B194-C3FC112CB30F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApi.UnitTests", "RestApi.UnitTests\RestApi.UnitTests.csproj", "{6B52AB40-8D27-40AF-B194-C3FC112CB30F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHelpers", "TestHelpers\TestHelpers.csproj", "{3BC34433-0BCC-4573-8E9C-4EC908D9BD69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestHelpers", "TestHelpers\TestHelpers.csproj", "{3BC34433-0BCC-4573-8E9C-4EC908D9BD69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
