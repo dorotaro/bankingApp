@@ -33,7 +33,7 @@ namespace Persistance.Configuration
         Database = "test"
       };
 
-      var connectionString1 = connectionStringBuilder.ConnectionString;
+      //var connectionString1 = connectionStringBuilder.ConnectionString;
 
       var connectionString = configuration.GetSection("ConnectionStrings")["SqlConnectionString"];
 
