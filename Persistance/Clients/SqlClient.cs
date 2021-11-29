@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Persistance.Clients
+namespace Persistence.Clients
 {
 	public class SqlClient : ISqlClient
 	{

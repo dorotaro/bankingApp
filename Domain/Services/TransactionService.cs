@@ -1,17 +1,13 @@
 ﻿using Contracts.Enums;
 using Contracts.Request;
-using Contracts.Response;
-using Persistance.Models.WriteModels;
-using Persistance.Repositories;
+using Persistence.Models.WriteModels;
+using Persistence.Repositories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.Services
 {
-	public class TransactionService : ITransactionService
+    public class TransactionService : ITransactionService
 	{
 		private readonly ITransactionRepository _transactionRepository;
 

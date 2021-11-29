@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
-namespace Persistance.Models.ReadModels
+namespace Persistence.Models.ReadModels
 {
-	public class LoginReadModel
+    public class LoginReadModel
   {
 		[JsonPropertyName("kind")]
     public string Kind { get; set; }

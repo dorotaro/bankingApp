@@ -1,11 +1,11 @@
-﻿using Persistance.Clients;
-using Persistance.Models.ReadModels;
-using Persistance.Models.WriteModels;
+﻿using Persistence.Clients;
+using Persistence.Models.ReadModels;
+using Persistence.Models.WriteModels;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Persistance.Repositories
+namespace Persistence.Repositories
 {
 	public class TransactionRepository : ITransactionRepository
 	{

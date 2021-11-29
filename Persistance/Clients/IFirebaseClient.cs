@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Persistance.Clients
+namespace Persistence.Clients
 {
 	public interface IFirebaseClient
 	{

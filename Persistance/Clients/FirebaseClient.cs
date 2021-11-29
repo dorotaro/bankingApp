@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Persistance.Clients
+namespace Persistence.Clients
 {
 	public class FirebaseClient : IFirebaseClient
 	{

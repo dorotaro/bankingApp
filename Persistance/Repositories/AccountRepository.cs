@@ -1,11 +1,11 @@
-﻿using Persistance.Clients;
-using Persistance.Models.ReadModels;
-using Persistance.Models.WriteModels;
+﻿using Persistence.Clients;
+using Persistence.Models.ReadModels;
+using Persistence.Models.WriteModels;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Persistance.Repositories
+namespace Persistence.Repositories
 {
 	public class AccountRepository : IAccountRepository
 	{
@@ -17,7 +17,7 @@ namespace Persistance.Repositories
 
 		public async Task<IEnumerable<AccountReadModel>> GetUserAccount(Guid id)
 		{
-			var query = "Select * From account Where Id=@id";
+			var query = "SELECT * FROM account WHERE Id=@id";
 
 			var param = new { Id = id };
 
@@ -26,7 +26,7 @@ namespace Persistance.Repositories
 
 		public async Task<IEnumerable<AccountReadModel>> GetUserAccounts(Guid userId)
 		{
-			var query = "Select * From account Where Userid =@userId";
+			var query = "SELECT * FROM account WHERE Userid =@userId";
 
 			var param = new { UserId = userId };
 
