@@ -36,7 +36,7 @@ namespace BankingApp.Controllers
 				return Ok($"User with email {registerRequestModel.Email} created");
 			}
 
-			return BadRequest("Something wrong happened");
+			return BadRequest("Something went wrong");
 
 
 		}
@@ -48,7 +48,7 @@ namespace BankingApp.Controllers
 
 			var user = await _userService.GetUserByEmail(loginRequestModel.Email);
 
-			if (user == null) return NotFound("There is no user with this credentials!");
+			if (user == null) return NotFound("There is no such user with these credentials!");
 
 			var model = await _authService.LoginAsync(loginRequestModel);
 
@@ -57,7 +57,7 @@ namespace BankingApp.Controllers
 				return (model);
 			}
 
-			return BadRequest("Something wrong happened");
+			return BadRequest("Something went wrong");
 		}
 	}
 }

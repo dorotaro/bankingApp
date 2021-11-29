@@ -1,8 +1,8 @@
 ﻿using Contracts.Enums;
 using Contracts.Request;
 using Contracts.Response;
-using Persistance.Models.WriteModels;
-using Persistance.Repositories;
+using Persistence.Models.WriteModels;
+using Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,32 +1,30 @@
-﻿using Persistance.Clients;
-using Persistance.Models.ReadModels;
-using Persistance.Models.WriteModels;
-using System;
-using System.Collections.Generic;
+﻿using Persistence.Clients;
+using Persistence.Models.ReadModels;
+using Persistence.Models.WriteModels;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistance.Repositories
+namespace Persistence.Repositories
 {
-	public class UserRepository : IUserRepository
+    public class UserRepository : IUserRepository
 	{
 		private readonly ISqlClient _sqlClient;
+
 		public UserRepository(ISqlClient sqlClient)
 		{
 			_sqlClient = sqlClient;
 		}
+
 		public async Task SaveAsync(UserWriteModel userWriteModel)
 		{
-			var query = "INSERT INTO user (Id, Email, DateCreated) VALUES (@Id," +
-			"@Email,@DateCreated)";
+			var query = "INSERT INTO user (Id, Email, DateCreated) VALUES (@Id, @Email, @DateCreated)";
 
 			await _sqlClient.Query<UserWriteModel>(query, userWriteModel);
 		}
 
 		public async Task<UserReadModel> GetUserByEmail(string email)
 		{
-			var query = $"SELECT * from user Where email=@email";
+			var query = $"SELECT * FROM user WHERE email=@email";
 
 			var param = new
 			{

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Persistance.Models.WriteModels
+namespace Persistence.Models.WriteModels
 {
 	public class AccountWriteModel
 	{

@@ -1,7 +1,7 @@
 ﻿using Domain.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Persistance.Configuration;
+using Persistence.Configuration;
 
 namespace Domain
 {

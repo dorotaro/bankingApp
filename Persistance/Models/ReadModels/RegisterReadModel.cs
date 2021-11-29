@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.Json.Serialization;
 
-namespace Persistance.Models.ReadModels
+namespace Persistence.Models.ReadModels
 {
     public class RegisterReadModel
     {

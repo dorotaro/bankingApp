@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Persistance.Models.ReadModels
+namespace Persistence.Models.ReadModels
 {
 	public class TransactionReadModel
 	{

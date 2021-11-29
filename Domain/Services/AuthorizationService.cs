@@ -1,9 +1,9 @@
 ﻿using Contracts.Request;
 using Contracts.Response;
-using Persistance.Clients;
-using Persistance.Models.ReadModels;
-using Persistance.Models.WriteModels;
-using Persistance.Repositories;
+using Persistence.Clients;
+using Persistence.Models.ReadModels;
+using Persistence.Models.WriteModels;
+using Persistence.Repositories;
 using System;
 using System.Threading.Tasks;
 
@@ -31,11 +31,11 @@ namespace Domain.Services
 			var firebaseLoginResponse = await _firebaseClient.LoginAsync<LoginWriteModel, LoginReadModel>(loginWriteModel);
 
 			return new LoginResponseModel
-      {
+			{
 				Email = firebaseLoginResponse.Email,
 				IdToken = firebaseLoginResponse.IdToken
 			};
-    }
+		}
 
 		public async Task<RegisterResponseModel> RegisterAsync(RegisterRequestModel registerRequestModel)
 		{

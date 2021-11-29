@@ -38,7 +38,7 @@ namespace BankingApp.Controllers
 
 			var user = await _userService.GetUserByEmail(firebaseClaims.FirebaseClaimResult.Email[0]);
 
-			if (user == null) return NotFound("There is no user with this email!");
+			if (user == null) return NotFound("There is no such user with this email!");
 
 			var acountCreateRequestModel = new AccountCreateRequestModel
 			{
@@ -64,7 +64,7 @@ namespace BankingApp.Controllers
 
 			var user = await _userService.GetUserByEmail(firebaseClaims.FirebaseClaimResult.Email[0]);
 
-			if (user == null) return NotFound("There is no user with this email!");
+			if (user == null) return NotFound("There is no such user with this email!");
 
 			var userAccounts = await _accountService.GetUserAccounts(user.Id);
 
@@ -73,7 +73,7 @@ namespace BankingApp.Controllers
 				return Ok(userAccounts);
 			}
 
-			return NotFound($"User have no accounts yet!");
+			return NotFound($"User has no accounts yet!");
 		}
 	}
 }

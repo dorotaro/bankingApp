@@ -1,12 +1,12 @@
-﻿using Persistance.Models.ReadModels;
-using Persistance.Models.WriteModels;
+﻿using Persistence.Models.ReadModels;
+using Persistence.Models.WriteModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Persistance.Repositories
+namespace Persistence.Repositories
 {
 	public interface IAccountRepository
 	{

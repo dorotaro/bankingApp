@@ -1,18 +1,14 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MySql.Data.MySqlClient;
-using Persistance.Clients;
-using Persistance.Repositories;
+using Persistence.Clients;
+using Persistence.Repositories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Persistance.Configuration
+namespace Persistence.Configuration
 {
-	public static class ServiceExtensions
+    public static class ServiceExtensions
 	{
     public static IServiceCollection AddPersistance(this IServiceCollection services, IConfiguration configuration)
     {
@@ -24,16 +20,16 @@ namespace Persistance.Configuration
 
     private static IServiceCollection AddSqlClients(this IServiceCollection services, IConfiguration configuration)
     {
-      var connectionStringBuilder = new MySqlConnectionStringBuilder()
+      /*var connectionStringBuilder = new MySqlConnectionStringBuilder()
       {
         Server = "Localhost",
         Port = 3306,
         UserID = "dorota",
         Password = "twvYGKJ4h+8n57%m",
         Database = "test"
-      };
+      };*/
 
-      var connectionString1 = connectionStringBuilder.ConnectionString;
+      //var connectionString1 = connectionStringBuilder.ConnectionString;
 
       var connectionString = configuration.GetSection("ConnectionStrings")["SqlConnectionString"];
 

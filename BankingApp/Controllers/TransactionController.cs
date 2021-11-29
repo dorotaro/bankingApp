@@ -45,7 +45,7 @@ namespace BankingApp.Controllers
 
 			var account = await _accountService.GetUserAccount(accountId);
 
-			if (account == null) return NotFound("There is no account with id!");
+			if (account == null) return NotFound("There is no such account with id!");
 
 			var transactionRequestModel = new TransactionRequestModel
 			{
@@ -57,7 +57,7 @@ namespace BankingApp.Controllers
 
 			await _transactionService.TopUpAccount(transactionRequestModel);
 
-			return Ok($"Added {amount} {account.Currency} to account");
+			return Ok($"Added {amount} {account.Currency} to your account");
 		}
 
 		[HttpGet]
@@ -77,7 +77,7 @@ namespace BankingApp.Controllers
 
 			var account = await _accountService.GetUserAccount(accountId);
 
-			if (account == null) return NotFound("There is no account with id!");
+			if (account == null) return NotFound("There is no account with such id!");
 
 			var accountBalance = await _transactionService.GetAccountBalance(account.AccountId);
 
@@ -102,17 +102,17 @@ namespace BankingApp.Controllers
 
 			var account = await _accountService.GetUserAccount(accountId);
 
-				if (account == null) return NotFound("There is no account with id!");
+				if (account == null) return NotFound("There is no account with such id!");
 
 			var accountBalance = await _transactionService.GetAccountBalance(account.AccountId);
 
-				if(accountBalance < amount) return BadRequest("Not enough funds on your account!");
+				if(accountBalance < amount) return BadRequest("Not enough funds in your account!");
 
 			var otherAccount = await _accountService.GetUserAccount(receiverAccountId);
 
-				if (otherAccount == null) return NotFound("There is no receiver account with id!");
+				if (otherAccount == null) return NotFound("There is no receiver account with such id!");
 				if (otherAccount.AccountId == account.AccountId) return NotFound("You cannot send money to yourself!");
-				if (account.Currency != otherAccount.Currency) return BadRequest("Your account has different currency than receiver!");
+				if (account.Currency != otherAccount.Currency) return BadRequest("Your account has a different currency from the receiver's!");
 
 			var transactionRequestModel = new TransactionRequestModel
 			{
@@ -124,7 +124,7 @@ namespace BankingApp.Controllers
 
 			await _transactionService.CreatePayment(transactionRequestModel);
 
-			return Ok($"Payment send with amount of {amount} {otherAccount.Currency} to receipient wiht Id {otherAccount.AccountId}");
+			return Ok($"Payment sent with amount of {amount} {otherAccount.Currency} to recipient with Id {otherAccount.AccountId}");
 		}
 	}
 }

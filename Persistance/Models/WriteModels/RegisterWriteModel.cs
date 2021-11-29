@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Persistance.Models.WriteModels
+namespace Persistence.Models.WriteModels
 {
     public class RegisterWriteModel
     {

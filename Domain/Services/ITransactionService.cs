@@ -1,14 +1,10 @@
 ﻿using Contracts.Request;
-using Contracts.Response;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.Services
 {
-	public interface ITransactionService
+    public interface ITransactionService
 	{
 		Task TopUpAccount(TransactionRequestModel transactionRequestModel);
 

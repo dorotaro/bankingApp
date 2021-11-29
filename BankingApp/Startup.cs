@@ -67,13 +67,13 @@ namespace BankingApp
 				.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 				.AddJwtBearer(options =>
 				{
-					options.Authority = "https://securetoken.google.com/bankingapp-576b8";
+					options.Authority = "https://securetoken.google.com/bankinapp-1d8db";
 					options.TokenValidationParameters = new TokenValidationParameters
 					{
 						ValidateIssuer = true,
-						ValidIssuer = "https://securetoken.google.com/bankingapp-576b8",
+						ValidIssuer = "https://securetoken.google.com/bankinapp-1d8db",
 						ValidateAudience = true,
-						ValidAudience = "bankingapp-576b8",
+						ValidAudience = "bankinapp-1d8db",
 						ValidateLifetime = true
 					};
 				});
